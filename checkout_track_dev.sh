@@ -1,6 +1,5 @@
 #!/bin/bash
 # Type: Simple git script
-# Author: Neil Francis Ramirez Hipona
 # Created: October 2023
 
 # NOTE: 

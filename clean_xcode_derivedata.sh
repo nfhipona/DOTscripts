@@ -1,6 +1,5 @@
 #!/bin/bash
 # Type: Simple xcode script
-# Author: Neil Francis Ramirez Hipona
 # Created: October 2023
 
 # Capture flag set `true` to pause in every run scripts
