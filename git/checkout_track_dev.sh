@@ -11,14 +11,18 @@ ticketcode="TICKET_CODE"
 branchcode=$1
 branch="$ticketcode-$branchcode"
 
+echo ""
+echo "--------------"
+echo ""
+
 if [[ ! -z $branchcode ]]; then
-    echo ""
     echo "Creating a new branch '$branch' from develop"
     git checkout -b $branch --no-track origin/develop
     echo "Created and switched to a new '$branch'"
-    echo ""
 else
-    echo ""
     echo "Invalid or no branch code provided..."
-    echo ""
 fi;
+
+echo ""
+echo "--------------"
+echo ""

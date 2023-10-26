@@ -12,19 +12,27 @@ branchcode=$1
 branch="$ticketcode-$branchcode"
 branchtarget=$2
 
-if [ ! -z $branchcode ] && [ ! -z $branchtarget ]; then
-    patchbranch="origin/$branchtarget"
-    echo ""
-    echo "Creating a new branch '$branch' from '$branchtarget'"
-    git checkout -b $branch --no-track $patchbranch
-    echo "Created and switched to a new '$branch' from tracked branch '$patchbranch'"
-    echo ""
-else
-    echo ""
+function runInvalidCommandMessage() {
     if [ ! -z $branchtarget ]; then
         echo "Invalid command... branch code and branch target is required..."
     else
         echo "Invalid or no branch code provided..."
     fi;
-    echo ""
+}
+
+echo ""
+echo "--------------"
+echo ""
+
+if [ ! -z $branchcode ] && [ ! -z $branchtarget ]; then
+    patchbranch="origin/$branchtarget"
+    echo "Creating a new branch '$branch' from '$branchtarget'"
+    git checkout -b $branch --no-track $patchbranch
+    echo "Created and switched to a new '$branch' from tracked branch '$patchbranch'"
+else
+    runInvalidCommandMessage
 fi;
+
+echo ""
+echo "--------------"
+echo ""
