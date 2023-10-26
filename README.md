@@ -9,10 +9,9 @@ Ex. `/Users/nfhipona/.myscripts` -> `DOTscripts`
 2. Run `create_alias.sh`.
 This will add all necessary aliases available to your `~/.bash_profile` and `~/.zshrc`.
 The configuration will use this path `~/.myscripts`.
-Modify as you see fit.
 
 3. You can start configuring the script with your custom settings so it would work based on your needs.
 Ex. checkout `git` folder which contains git helper commands that needs modification before usage.
 
-4. You can add and modify the scripts. 
+4. You can add and modify the scripts from your `DOTscripts`.
 Update `create_alias.sh` and run it again, or manually add or load your custom `aliases` to your `~/.bash_profile`.
