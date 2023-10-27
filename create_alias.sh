@@ -5,26 +5,8 @@
 myscripts=$(echo "~/.myscripts")
 
 # configure ~/.zshrc
-# 
-function add_bash_profile_to_zshrc_if_not_exists() {
-    echo ""
-    echo "" >> ~/.zshrc
-    zshrc_bash="source ~/.bash_profile"
-    
-    if [ ! -z "$(grep -Fx "$zshrc_bash" ~/.zshrc)" ]; then
-        # code if found
-        echo "Profile ~/.bash_profile is already loaded to ~/.zshrc"
-    else
-        # code if not found
-        echo "Adding ~/.bash_profile config to ~/.zshrc ..."
-        
-        echo "" >> ~/.zshrc
-        echo $zshrc_bash >> ~/.zshrc
-        echo "Profile ~/.bash_profile loaded to ~/.zshrc"
-    fi
-    
-    echo ""
-}
+# load ~/.bash_profile
+load_bash_profile="lib/load_bash_profile_to_zshrc.sh"
 
 # Usage:
 # define variable to hold the long script
@@ -56,7 +38,8 @@ sh $add_alias "$cbpatch"
 # git --end
 
 # call zshrc function and configure ~/.zshrc
-add_bash_profile_to_zshrc_if_not_exists
+# remove flag 'true' for ~/.bash_profile source
+sh $load_bash_profile true
 
 # reload ~/.zshrc
 echo "Reloading ~/.zshrc"
