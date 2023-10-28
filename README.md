@@ -18,7 +18,7 @@ Update `create_alias.sh` and run it again, or manually add or load your custom `
 
 # Screenshots
 
-#### Setup
+### Setup
 
 <details>
   <summary>View</summary>
@@ -27,7 +27,7 @@ Update `create_alias.sh` and run it again, or manually add or load your custom `
   
 </details>
 
-#### Create Alias
+### Create Alias
 
 <details>
   <summary>View</summary>
@@ -38,7 +38,7 @@ Update `create_alias.sh` and run it again, or manually add or load your custom `
   
 </details>
 
-#### Others
+### Others
 
 <details>
   <summary>View</summary>
