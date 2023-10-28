@@ -33,3 +33,12 @@ fi
 echo ""
 echo "--------------"
 echo ""
+
+echo ""
+echo ""
+
+echo "Please enjoy the booty!"
+sh lib/boooty.sh
+
+echo ""
+echo ""
