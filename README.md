@@ -44,6 +44,6 @@ Update `create_alias.sh` and run it again, or manually add or load your custom `
   <summary>View</summary>
   
   <img width="400" alt="cleandd_script_2" src="https://github.com/nfhipona/DOTscripts/assets/8805997/efd0155a-ec02-4785-aea6-1b55dfe7624e">
-  <img width="400" alt="cleandd_script_2" src="https://github.com/nfhipona/DOTscripts/assets/8805997/0be9acb2-2082-437c-9dee-08a5031d56e5">
+  <img width="400" alt="cleandd_script" src="https://github.com/nfhipona/DOTscripts/assets/8805997/d0689d6e-301c-48c2-93a2-c90c46dd9baa">
 
 </details>
