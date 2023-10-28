@@ -16,11 +16,11 @@ echo "--------------"
 echo ""
 
 if [[ ! -z $branchcode ]]; then
-    echo "Creating a new branch '$branch' from develop"
+    echo "🔄 Creating a new branch '$branch' from develop ⚙️"
     git checkout -b $branch --no-track origin/develop
-    echo "Created and switched to a new '$branch'"
+    echo "🔄 Created and switched to a new '$branch' 🎉"
 else
-    echo "Invalid or no branch code provided..."
+    echo "↳ Invalid or no branch code provided... ‼️"
 fi;
 
 echo ""

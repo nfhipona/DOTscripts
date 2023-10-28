@@ -5,6 +5,8 @@
 # get input file path: ex. '~/.zshrc'
 c=`tail -c 1 $1`
 if [ "$c" != "" ]; then
+    echo ""
+    echo "✉️  Adding new line to file $1"
     echo "" >> $1
-    echo "New line is added to $1"
+    echo "↳ Done. 🎉"
 fi

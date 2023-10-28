@@ -10,34 +10,37 @@ myscripts=$(pwd)
 echo ""
 echo "--------------"
 echo ""
-echo "Starting SymLink configuration for '$myscripts'"
+echo "⚙️  Starting SymLink configuration for '$myscripts'"
 
-#echo "Creating scripts directory at path '$symlinkdirectory'"
-#mkdir -p "$symlinkdirectory"
+# remove ~/.myscripts if exists
+echo "↳ Prepare target path"
+rm -rf ~/.myscripts
+echo "↳ Done."
+echo ""
 
-echo "Linking directory '$myscripts' to temp '$symlinkdirectory'"
+echo "🔗 Linking directory '$myscripts' to temp '$symlinkdirectory'"
 ln -sf $myscripts $symlinkdirectory
+echo "↳ Done."
 echo ""
 
 if [ ! -z "$(ls -A $symlinkdirectory)" ]; then
-    echo "SymLink successful..."
+    echo "↳ SymLink successful 🎉"
     ls -l $symlinkdirectory
     
     echo ""
-    echo "Lists of files found on path '$symlinkdirectory':"
+    echo "📝 Lists of files found on path '$symlinkdirectory':"
     ls -A $symlinkdirectory
 else
-    echo "SymLink failed..."
+    echo "↳ SymLink failed ‼️"
 fi
 
 echo ""
 echo "--------------"
-echo ""
 
 echo ""
 echo ""
 
-echo "Please enjoy the booty!"
+echo "❇️  Please enjoy the booty!"
 sh lib/boooty.sh
 
 echo ""

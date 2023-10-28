@@ -14,9 +14,9 @@ branchtarget=$2
 
 function runInvalidCommandMessage() {
     if [ ! -z $branchtarget ]; then
-        echo "Invalid command... branch code and branch target is required..."
+        echo "↳ Invalid command... branch code and branch target is required... ‼️"
     else
-        echo "Invalid or no branch code provided..."
+        echo "↳ Invalid or no branch code provided... ‼️"
     fi;
 }
 
@@ -26,9 +26,9 @@ echo ""
 
 if [ ! -z $branchcode ] && [ ! -z $branchtarget ]; then
     patchbranch="origin/$branchtarget"
-    echo "Creating a new branch '$branch' from '$branchtarget'"
+    echo "🔄 Creating a new branch '$branch' from '$branchtarget' ⚙️"
     git checkout -b $branch --no-track $patchbranch
-    echo "Created and switched to a new '$branch' from tracked branch '$patchbranch'"
+    echo "🔄 Created and switched to a new '$branch' from tracked branch '$patchbranch' 🎉"
 else
     runInvalidCommandMessage
 fi;

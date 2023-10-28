@@ -8,12 +8,12 @@ alias_path="alias/"
 function check_and_lists_aliases() {
     # list aliases scripts
     if [ ! -z "$(ls $alias_path)" ]; then
-        echo "Lists of scripts found on path '$alias_path':"
+        echo "📝 Lists of scripts found on path '$alias_path': ↴"
         ls $alias_path
 
         read_and_run_aliases
     else
-        echo "No scripts found on path '$alias_path'"
+        echo "📝 No scripts found on path '$alias_path' ‼️"
         echo ""
     fi
 }
@@ -26,9 +26,9 @@ function read_and_run_aliases() {
     for file in $alias_path*
     do
         echo ""
-        echo "Running script: $file"
+        echo "🔄 Running script: $file ↴"
         sh $file
-        echo "$file: Done."
+        echo "➤ $file: Done. 🎉"
     done
 }
 

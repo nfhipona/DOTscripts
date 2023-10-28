@@ -14,9 +14,9 @@ sh lib/alias_runner.sh
 sh lib/load_bash_profile_to_zshrc.sh true
 
 # reload ~/.zshrc
-echo "Reloading ~/.zshrc"
+echo "🔄 Reloading ~/.zshrc"
 source ~/.zshrc
-echo "Done."
+echo "↳ Done."
 
 echo ""
 echo "--------------"

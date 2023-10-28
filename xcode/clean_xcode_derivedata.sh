@@ -16,7 +16,7 @@ folderPath="/Users/$USER/Library/Developer/Xcode/DerivedData/"
 function pause() {
     if [ ! -z $flag ] && $flag; then
         echo ""
-        read -s -n 1 -p "Press any mekus key to continue . . ."
+        read -s -n 1 -p "🔄 Press any mekus key to continue . . ."
         echo ""
     fi;
 }
@@ -27,7 +27,7 @@ function purgePath() {
 
     # Proceed on deleting files in the target directory
     echo ""
-    echo "Purging path '$folderPath'"
+    echo "↳ Purging path '$folderPath' ‼️"
     rm -rf $folderPath* -y
 
     showPurgeMessage
@@ -35,35 +35,34 @@ function purgePath() {
 
 function showPurgeMessage() {
     if [ -z "$(ls $showHiddenFlag $folderPath)" ]; then
-        echo "Purged..."
-        echo "--------------"
-        echo ""
+        echo "↳ Purged... ‼️"
     else
-        echo "Purge failed..."
+        echo "↳ Purge failed... ‼️"
         echo ""
-        echo "Remaining files:"
+        echo "📝 Remaining files: ↴"
         ls $showHiddenFlag $folderPath
-        echo "--------------"
-        echo ""
     fi
+
+    echo "--------------"
+    echo ""
 }
 
 function startPurge() {
     echo ""
     echo "--------------"
-    echo "Staring cleanup for '$USER'"
+    echo "⚙️  Staring cleanup for '$USER'"
 
     # List all files in the directory
     if [ ! -z "$(ls $showHiddenFlag $folderPath)" ]; then
         echo ""
-        echo "Lists of files found on path '$folderPath':"
+        echo "📝 Lists of files found on path '$folderPath': ↴"
         ls $showHiddenFlag $folderPath
 
         # call purge path
         purgePath
     else
         echo ""
-        echo "No files found on path '$folderPath'"
+        echo "📝 No files found on path '$folderPath'"
         echo "--------------"
         echo ""
     fi
