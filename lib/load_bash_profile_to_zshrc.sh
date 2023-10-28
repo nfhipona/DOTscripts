@@ -2,7 +2,6 @@
 # Type: bash_profile setup helper script
 # Created: October 2023
 
-# configure ~/.zshrc
 # load ~/.bash_profile to ~/.zshrc
 function add_bash_profile_to_zshrc_if_not_exists() {
     echo ""
@@ -17,9 +16,8 @@ function add_bash_profile_to_zshrc_if_not_exists() {
         # code if not found
         echo "Adding ~/.bash_profile config to ~/.zshrc"
         
-        # add new line
-        echo "" >> ~/.zshrc
-        echo "" >> ~/.zshrc
+        # check for new line, add if needed
+        sh lib/new_line_check.sh ~/.zshrc
 
         echo $zshrc_bash >> ~/.zshrc
         echo "Profile ~/.bash_profile loaded to ~/.zshrc"

@@ -19,6 +19,9 @@ function check_and_lists_aliases() {
 }
 
 function read_and_run_aliases() {
+    # check for new line, add if needed
+    sh lib/new_line_check.sh ~/.bash_profile
+
     # read and iterate through aliases scripts
     for file in $alias_path*
     do
