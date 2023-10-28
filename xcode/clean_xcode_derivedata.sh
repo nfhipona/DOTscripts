@@ -42,14 +42,9 @@ function showPurgeMessage() {
         echo "📝 Remaining files: ↴"
         ls $showHiddenFlag $folderPath
     fi
-
-    echo "--------------"
-    echo ""
 }
 
 function startPurge() {
-    echo ""
-    echo "--------------"
     echo "⚙️  Staring cleanup for '$USER'"
 
     # List all files in the directory
@@ -63,9 +58,16 @@ function startPurge() {
     else
         echo ""
         echo "📝 No files found on path '$folderPath'"
-        echo "--------------"
-        echo ""
     fi
 }
 
+echo ""
+echo "--------------"
+echo ""
+
 startPurge
+echo "➤ Done. 🎉"
+
+echo ""
+echo "--------------"
+echo ""
