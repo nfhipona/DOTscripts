@@ -14,6 +14,8 @@ function add_alias_if_not_exists() {
         echo "Alias '$1' is already added to ~/.bash_profile"
     else
         # code if not found
+        # add new line and run add script
+        echo "" >> ~/.bash_profile
         echo "Adding alias '$1' to ~/.bash_profile"
         echo "$1" >> ~/.bash_profile
         echo "Done."

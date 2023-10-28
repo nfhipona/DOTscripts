@@ -19,16 +19,13 @@ function check_and_lists_aliases() {
 }
 
 function read_and_run_aliases() {
-    # add new line and run add script
-    echo "" >> ~/.bash_profile
-
     # read and iterate through aliases scripts
     for file in $alias_path*
     do
         echo ""
         echo "Running script: $file"
         sh $file
-        echo "Done."
+        echo "$file: Done."
     done
 }
 
