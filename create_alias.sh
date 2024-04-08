@@ -14,9 +14,10 @@ sh lib/alias_runner.sh
 sh lib/load_bash_profile_to_zshrc.sh true
 
 # reload ~/.zshrc
-echo "🔄 Reloading ~/.zshrc"
-source ~/.zshrc
-echo "↳ Done."
+echo "🔄 Reload your '~/.zshrc' with command 'source ~/.zshrc' ↴"
+echo "↳ or you can exit and re-open your Terminal.app. ↴"
+echo "↳ Happy coding! 🎉🎉🎉"
+echo "↳ Done. 🎊"
 
 echo ""
 echo "--------------"
