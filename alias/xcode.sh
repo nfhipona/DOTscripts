@@ -18,4 +18,7 @@ add_alias="lib/add_alias_if_not_exists.sh"
 cleandd="alias cleandd=\"$myscripts/xcode/clean_xcode_derivedata.sh\""
 sh $add_alias "$cleandd"
 
+cleanar="alias cleanar=\"$myscripts/xcode/clean_xcode_archives.sh\""
+sh $add_alias "$cleanar"
+
 # xcode --end
