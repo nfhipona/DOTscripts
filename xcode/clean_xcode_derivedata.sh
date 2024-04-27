@@ -45,7 +45,7 @@ function showPurgeMessage() {
 }
 
 function startPurge() {
-    echo "⚙️  Staring cleanup for '$USER'"
+    echo "⚙️  Starting cleanup for '$USER'"
 
     # List all files in the directory
     if [ ! -z "$(ls $showHiddenFlag $folderPath)" ]; then
